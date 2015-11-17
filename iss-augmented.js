@@ -44,15 +44,11 @@ prompt.get(['city'], function(err, result) {
             for (var properties in coordinates) {
                 userLoca.push(coordinates[properties]);
             }
-            console.log(userLoca);
 
             var lat1 = issLoca[0];
             var lat2 = userLoca[0];
             var lon1 = issLoca[1];
             var lon2 = userLoca[1];
-
-            console.log(issLoca);
-            console.log(userLoca);
 
             var R = 6371000; // metres
             var φ1 = lat1.toRadians();
@@ -67,7 +63,7 @@ prompt.get(['city'], function(err, result) {
 
             var d = R * c;
 
-            console.log(d);
+            console.log('Your distance from the ISS, in metres, is: ' + d);
         }
     });
 })
